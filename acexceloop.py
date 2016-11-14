@@ -18,6 +18,10 @@ class acexcel:
             cell_temp = table.cell(i,4).value
             result.append(str(colume_A[i])+"="+str(cell_temp))
         print(result)
+        fo = open("foo1.txt", "a+")
+        for j in range(end_position_num-start_position_num):
+            fo.write(result[j])
+        fo.close()
         '''
         for j in range(end_position_num-start_position_num):
             fo = open("foo1.txt", "a+")
